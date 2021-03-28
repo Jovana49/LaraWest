@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+$orange: rgb(237, 155, 2);
+$dark: rgb(43, 40, 33);
+$transparent: transparent;
+$background: rgba(43, 40, 33, 0.7);
+$startColor: rgba(237, 155, 2, 0.2);
+$endColor: rgba(237, 155, 2, 0);
+$footerColor: rgb(26, 26, 26);
+$grey: rgb(191, 191, 191);
+
+@mixin position ($position, $z-index) {
+    position: $position;
+    z-index: $z-index;
+}
+
+@mixin flex-container ($flex-direction, $justify-content, $align-items) {
+	display: flex;
+	flex-direction: $flex-direction;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin font ($size, $color, $weight) {
+    color: $color;
+    font: {
+        size: $size;
+        weight: $weight;
+    }
+}
+
+@mixin same-dimensions ($dimension) {
+    width: $dimension;
+    height: $dimension;
+}
+
+@mixin section-main ($margin-top, $padding) {
+    margin-top: $margin-top;
+    padding: $padding;
+}
+
+html {scroll-behavior: smooth;}
+ 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {width: 100%;}
+
+ul {
+    list-style-type: none;
+    @include flex-container (row, space-between, center);
+}
+
+a {text-decoration: none;}
+
+#header {
+    width: 100%;
+    height: auto;
+    @include position (fixed, 3);
+    @include flex-container (row, space-around, center);
+    background-color: rgba(255, 255, 255, 0.9);
+
+    #logo {
+        width: auto;
+        margin-top: 10px;
+    }
+
+    #menu {
+        width: 40%;
+        #menu-button {display: none;}
+        ul {
+            li {
+                a {
+                    @include font (20px, $black, 600);
+                    text-transform: uppercase;
+                    &:hover {color: $orange;}
+                    &.active {color: $orange;}
+                }
+            }
+        }
+    }
+}
+
+@mixin line {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 3px;
+    background-color: $orange;
+    border-radius: 15px;
+}
+
+.section-header {
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        @include flex-container (row, center, center);
+        font-size: 30px;
+        letter-spacing: 3px;
+
+        &::before {
+            @include line;
+            margin-right: 30px;
+        }
+
+        &::after {
+            @include line;
+            margin-left: 30px;
+        }
+    }
+}
+
+@mixin section {
+    width: 100%;
+    padding: 60px 0;
+}
+
+#main {
+    width: 100%;
+
+    #home {
+        width: 100%;
+        height: 70vh;
+        @include position (relative, 0);
+        
+        #background {
+            @include same-dimensions (100%);
+            @include position (absolute, 1);
+            filter: grayscale(100%);
+            background: {
+                image: url("../img/background.jpg");
+                repeat: no-repeat;
+                position: 0 10%;
+                size: cover;
+            }
+
+            &:hover {filter: none;}
+
+            &::after {
+                content: "";
+                display: block;
+                @include position (absolute, 2);
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background-color: $startColor;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    background-color: $endColor;
+                    transition: all 0.5s ease-out;
+                }
+            }
+        }
+        
+        #title {
+            width: 40%;
+            @include position (absolute, 2);
+            left: -40%;
+            top: 50%;
+            text-align: center;
+
+            h1 {
+                letter-spacing: 3px;
+                @include font (45px, $black, 800);
+                line-height: 50px;
+
+                -webkit-text: {
+                    fill-color: $black;
+                    stroke: {
+                        width: 0.7px;
+                        color: $orange;
+                    }
+                }
+            }
+
+            animation: {
+                name: title-animation;
+                duration: 3s;
+                timing-function: linear;
+                fill-mode: forwards;
+            }
+
+            @keyframes title-animation {
+                0% {left: -40%;}
+                100% {left: 10%;}
+            }
+        }
+    }
+
+    #skills {
+        @include section;
+        .section-main {
+            @include section-main (100px, 0);
+
+            #my-skills {
+                width: 100%;
+                @include flex-container (row, center, flex-start);
+
+                .skill {
+                    width: 24%;
+                    @include flex-container (column, center, center);
+                    &:nth-child(2) {margin: 0 80px;}
+
+                    .icon {width: auto;}
+                    header {
+                        margin: 30px 0 20px;
+                        h3 {
+                            @include font(22px, $dark, 600);
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    .skill-text {
+                        width: 100%;
+                        text-align: center;
+                        p {font-size: 19px;}
+                    }
+                }
+            }
+        }
+    }
+
+    #projects {
+        @include section;
+        background: $background;
+        .section-main {
+            @include section-main (100px, 0 0 50px);
+            
+            #my-projects {
+                width: 100%;
+                @include flex-container (row, center, center);
+
+                .project {
+                    width: 40%;
+                    text-align: center;
+                    @include position (relative, 0);
+                    @include flex-container (row, center, center);
+
+                    a {
+                        img {
+                            filter: grayscale(100%);
+                        }
+                    }
+                    
+                    .link-text {
+                        width: 70%;
+                        padding: 10% 0;
+                        @include position (absolute, 1);
+                        display: none;
+                        p {
+                            &:first-of-type {
+                                letter-spacing: 1px;
+                                margin-bottom: 10px;
+                                @include font (22px, $black, 700);
+                            }
+
+                            &:last-of-type {@include font (20px, $black, 500);}
+                        }
+                    }
+                    
+                    &:hover {
+                        a {
+                            img {
+                                filter: none;
+                            }
+                        }
+
+                        .link-text {
+                            display: block;
+                            background-color: rgba(255, 255, 255, 0.9);
+                        }
+                    }
+                }
+
+                $i: 1;
+                @while $i <= 2 {
+                    .project-#{$i} {
+                        @if $i == 1 {left: -1%;}
+                        @else {left: 1%;}
+                    }
+                    $i: $i + 1;
+                }
+            }
+        }
+    }
+
+    #about-me {
+        @include section;
+        .section-main {
+            @include section-main (100px, 50px 0 100px);
+            @include flex-container (row, space-around, center);
+
+            #image-section {
+                width: 30%;
+                left: 5%;
+                @include position (relative, 0);
+                @include flex-container (row, center, center);
+                
+                #border {
+                    width: 80%;
+                    height: 60vh;
+                    border: 7px solid $orange;
+                    @include position (absolute, 0);
+                    left: 0;
+                    top: -60px;
+                }
+
+                #full {
+                    width: 80%;
+                    height: 60vh;
+                    background-color: $background;
+                    @include position (absolute, 1);
+                    bottom: -60px;
+                    right: 0;
+                }
+                
+                #image {
+                    width: 80%;
+                    @include position (relative, 2);
+                }
+            }
+
+            #short-bio {
+                width: 27%;
+                margin-right: 2%;
+                border: 4px solid $background;
+                padding: 40px;
+                p {
+                    font-size: 20px;
+                    word-spacing: 2px;
+                }
+            }
+        }
+    }
+
+    @mixin form-item ($width, $height, $margin-bottom, $padding) {
+        display: block;
+        font-size: 18px;
+        width: $width;
+        height: $height;
+        margin-bottom: $margin-bottom;
+        padding: $padding;
+        background-color: $transparent;
+        border: {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: {
+                width: 1px;
+                style: solid;
+                color: $black;
+            }
+        }
+    }
+
+    #contact {
+        @include section;
+        background: $background;
+        .section-main {
+            @include section-main (100px, 0);
+            @include flex-container (row, space-between, flex-start);
+
+            #contact-info {
+                width: auto;
+                margin-top: 40px;
+
+                .info {
+                    @include flex-container (row, flex-start, center);
+                    
+                    .icon-info {
+                        @include same-dimensions (90px);
+                        @include flex-container (row, center, center);
+                        background-color: $orange;
+                        i {font-size: 30px;}
+
+                        &:hover {
+                            background-color: $black;
+                            i {color: $orange;}
+                        }
+                    }
+
+                    .info-text {
+                        margin-left: 40px;
+                        display: none;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        padding: 5px;
+                        p {
+                            font-size: 26px;
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    &:nth-child(2) {margin: 10px 0;}
+
+                    &:hover {
+                        .info-text {display: block;}
+                    }
+                }
+            }
+
+            #form {
+                width: 40%;
+                margin-right: 10%;
+                #contact-form {
+                    width: 100%;
+
+                    $i: 1;
+                    @while $i <= 4 {
+                        .input-#{$i} {
+                            @if $i <= 3 {@include form-item (calc(100% - 20px), 35px, 15px, 0 10px);}
+                            @else {
+                                width: 18%;
+                                height: 53px;
+                                @include font (18px, $orange, 500);
+                                background-color: $dark;
+                            }
+                        }
+                        $i: $i + 1;
+                    }
+
+                    textarea {@include form-item (calc(100% - 20px), 200px, 15px, 10px);}
+
+                    ::placeholder {
+                        @include font (18px, rgba(0, 0, 0, 0.9), 500);
+                        letter-spacing: 1px;
+                    }
+
+                    :focus {
+                        font-size: 18px;
+                        outline: none;
+                        color: $white;
+                        background-color: $startColor;
+                        &::placeholder {color: $black};
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    @include flex-container (row, center, center);
+    flex-wrap: wrap;
+    background-color: $footerColor;
+    
+    #copyright {
+        width: 40%;
+        left: 5%;
+        @include position (relative, 0);
+        p {
+            @include font (20px, $grey, 500);
+            letter-spacing: 1px;
+        }
+    }
+
+    #social-media {
+        width: 10%;
+        @include position (relative, 0);
+        left: 20%;
+        top: 20px;
+        ul {
+            li {
+                a {
+                    i {@include font (22px, $orange, 400);}
+                    &:hover {
+                        & .fa-facebook-f {color: #4267b2;}
+
+                        & .fa-instagram {
+                            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+                            -webkit-background-clip: text;
+                            background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+
+                        & .fa-twitter {color: #1da1f2;}
+                        & .fa-linkedin-in {color: #0077b5;}
+                    }
+                }
+            }
+        }
+    }
+
+    #links {
+        width: 100%;
+        ul {
+            width: 28%;
+            margin: 15px auto 0;
+            li {
+                a {
+                    @include font (18px, $grey, 500);
+                }
+            }
+        }
+    }
+}
