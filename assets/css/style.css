@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+@font-face {
+    src: url('../font/Existence-Light.otf');
+    font-family: ExistenceLight;
+}
+
+:root {
+    --black: rgb(0, 0, 0);
+    --grey: rgb(203, 214, 204);
+    --rose: rgb(247, 172, 153);
+    --green: rgb(153, 191, 163);
+    --green1: rgb(101, 148, 119);
+    --rose1: rgb(247, 132, 124);
+    --transparent: rgba(255, 255, 255, 0.8);
+    --darkGrey: rgb(147, 150, 149);
+}
+
+body {
+    font-family: ExistenceLight;
+    font-size: 19px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.DancingScript {
+    font-family: 'Allura', cursive;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.black {
+    color: var(--black);
+}
+
+.green {
+    color: var(--green);
+}
+
+.green:hover {
+    color: var(--green1);
+}
+
+.link-color:hover {
+    color: var(--rose);
+}
+
+.link-color {
+    color: var(--grey);
+}
+
+.font-21 {
+    font-size: 21px;
+}
+
+.font-23 {
+    font-size: 23px;
+}
+
+.font-30 {
+    font-size: 30px;
+}
+
+.font-32 {
+    font-size: 32px;
+}
+
+.font-50 {
+    font-size: 50px;
+}
+
+.font-60 {
+    font-size: 60px;
+}
+
+.font-85 {
+    font-size: 85px;
+}
+
+.background {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.w-95 {
+    width: 95%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-85 {
+    width: 85%;
+} 
+
+body > main, #contact {
+    padding-top: 40px !important;
+    padding-bottom: 120px;
+}
+
+#services h4 {
+    line-height: 45px;
+}
+
+/* Header */
+
+.logo {
+    width: 200px !important;
+}
+
+ul.ul-font a { 
+    font-size: 25px !important;
+}
+
+.nav-item > a {
+    font-size: 23px !important;
+}
+
+.navbar-collapse > .navbar-nav * {
+    padding: 0 !important;
+}
+
+li.active a, li.nav-item a:hover {
+    color: var(--rose1) !important;
+}
+
+.logo-background {
+    height: 400px;
+    width: 500px;
+    top: 0;
+    left: 0;
+    background-color: var(--darkGrey);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+/* Početna */
+
+h1 {
+    line-height: 55px;
+}
+
+.carousel img {
+    height: 100vh;
+}
+
+.carousel .btn {
+    background-color: var(--grey) !important;
+}
+
+.carousel .btn:hover, .carousel article a {
+    color: var(--rose1) !important;
+}
+
+.carousel article a:hover h4 {
+    color: var(--green);
+}
+
+.carousel-item:first-child .carousel-caption {
+    margin-bottom: 10vh;
+}
+
+.carousel-item:last-child .carousel-caption h2 {
+    line-height: 55px;
+} 
+
+.carousel-item:nth-child(2) .carousel-caption, .carousel-item:last-child .carousel-caption  {
+    margin-bottom: 33vh;
+} 
+
+.carousel-indicators li, .icon {
+    width: 70px;
+    height: 70px;
+    background-image: url('../img/slider-indicators.png');
+    background-size: cover;
+    background-color: transparent;
+}
+
+.card-body article {
+    height: auto !important;
+    padding: 0 5px !important;
+}
+
+.card-body a {
+    padding: 20px;
+}
+
+.card-body article h4 {
+    margin-bottom: 0 !important;
+}
+
+.blockquote {
+    line-height: 43px;
+}
+
+.blockquote-footer2 {
+    font-size: 25px;
+}
+
+/* O nama */
+
+header > h2 {
+    color: var(--grey);
+    top: -60px;
+}
+
+header > h3 {
+    line-height: 45px !important;
+}
+
+main > section > header {
+    margin-bottom: 70px;
+}
+
+.rose-1::before {
+    width: 250px;
+    height: 150px;
+    content: "";
+    margin: 0 auto 40px;
+    display: block;
+    background-image: url('../img/ruza1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.rose-2::before {
+    width: 120px;
+    height: 120px;
+    content: "";
+    margin-bottom: 55px;
+    display: block;
+    background-image: url('../img/ruza2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+figcaption > p {
+    font-size: 38px;
+}
+
+.bottom-1 {
+    bottom: 4vh;
+}
+
+.bottom-2 {
+    bottom: 28vh;
+}
+
+.right {
+    right: 15%;
+}
+
+.left {
+    left: 10%;
+}
+
+p.font-32 {
+    line-height: 27px;
+}
+
+.divider {
+    padding: 40px 0 20px !important;
+    background-image: url('../img/divider.jpg');
+    background-attachment: fixed;
+}
+
+.divider::before, .divider::after {
+    width: 80%;
+    height: 1px;
+    position: relative;
+    content: "";
+    display: block;
+    background-color: var(--black);
+}
+
+.divider::before {
+    top: -60px;
+} 
+
+.divider::after {
+    bottom: -40px;
+}
+
+.leaf {
+    width: 100px;
+    height: 100px;
+    top: 23%;
+    right: -35px;
+    background-image: url('../img/list.png');
+    background-size: 100px 100px !important;
+}
+
+/* Usluge */
+
+#services > article > * {
+    height: 400px;
+}
+
+#services > article {
+    margin-bottom: 5px;
+}
+
+#services > article p.w-95 {
+    font-size: 21px !important;
+}
+
+#services img {
+    width: 90%;
+}
+
+#services > article:last-child {
+    margin-bottom: 0;
+}
+
+.modal-content {
+    background-color: var(--transparent); 
+}
+
+h5.modal-title {
+    font-size: 30px !important;
+    color: var(--rose1);
+}
+
+#services button {
+    background-color: var(--green);
+}
+
+button.close {
+    font-size: 30px !important;
+    background-color: transparent !important;
+}
+
+/* Galerija */
+
+.margin-left {
+    margin-left: 20%;
+}
+
+.top-left {
+    left: -5%;
+    top: 22%;
+    width: 27% !important;
+    background-image: url('../img/pink.png');
+    background-size: 100%;
+}
+
+.top-left > h5 {
+    line-height: 55px;
+}
+
+.gallery-text {
+    font-size: 26px;
+    line-height: 34px;
+}
+
+.border {
+    border-width: 2px !important;
+}
+
+/* Kontakt */
+
+textarea {
+    height: 180px !important;
+}
+
+form > button {
+    width: 120px !important;
+}
+
+.bg-image {
+    background-image: url('../img/kontakt.jpg');
+}
+
+i {
+    font-size: 30px !important;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--darkGrey);
+}
+
+footer.footer1 .font-21 {
+    font-size: 21x !important;
+}
+
+footer.footer1 a {
+    font-size: 20.5px !important;
+}
+
+form button {
+    background-color: var(--green) !important;
+}
+
+textarea:active, input:active, textarea:focus, input:focus {
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+    border-color: var(--green) !important;
+}
