@@ -139,7 +139,7 @@ li.active a, li.nav-item a:hover {
 
 /* Početna */
 .mark {
- background-color: var(--green) !important;
+ background-color: var(--grey) !important;
 }
 
 h1 {
