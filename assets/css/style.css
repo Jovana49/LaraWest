@@ -138,6 +138,9 @@ li.active a, li.nav-item a:hover {
 }
 
 /* Početna */
+.mark {
+ background-color: var(--green) !important;
+}
 
 h1 {
     line-height: 55px;
