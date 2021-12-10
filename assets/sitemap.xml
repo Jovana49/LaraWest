@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<urlset xmlns = "http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://jovana49.github.io/LaraWest/index.html</loc>
+		<lastmod>2021-12-10</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://jovana49.github.io/LaraWest/o-nama.html</loc>
+		<lastmod>2021-12-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>https://jovana49.github.io/LaraWest/usluge.html</loc>
+		<lastmod>2021-12-10</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://jovana49.github.io/LaraWest/galerija.html</loc>
+		<lastmod>2021-12-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://jovana49.github.io/LaraWest/kontakt.html</loc>
+		<lastmod>2021-12-10</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>"https://jovana49.github.io/JovanaKurtic/"</loc>
+		<lastmod>2021-12-10</lastmod>
+		<changefreq>jearly</changefreq>
+		<priority>0.6</priority>
+	</url>
+</urlset>
