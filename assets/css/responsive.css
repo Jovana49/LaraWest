@@ -1,0 +1,478 @@
+@media screen and (max-width: 1700px) {
+    .font-23 {
+        font-size: 21px !important;
+    }
+}
+
+@media screen and (max-width: 1510px) {
+    .bottom-1 {
+        bottom: 2vh;
+    }
+
+    .bottom-2 {
+        bottom: 20vh;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .left {
+        left: 3%;
+    }
+
+    .bottom-2 {
+        bottom: 15vh;
+    }
+
+    .top-left {
+        top: 12%;
+    }
+
+    .top-left > h5 {
+        font-size: 60px;
+        line-height: 45px;
+    }
+
+    .gallery-text {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .carousel-item:last-child .carousel-caption  {
+        margin-bottom: 25vh;
+    } 
+}
+
+@media screen and (max-width: 1300px) {
+    .carousel-inner .collapse, .card {
+        width: 80vw !important;
+    }
+
+    .carousel-inner .collapse {
+        left: -5vw;
+    }
+
+    .carousel-item:last-child .carousel-caption > h2 {
+        font-size: 50px !important;
+        line-height: 50px;
+    } 
+}
+
+@media screen and (max-width: 1300px) {
+    #contact p.font-21 {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .rose-2 {
+        top: -50px;
+    }
+
+    .rose-1 > p {
+        font-size: 27px !important;
+    }
+
+    .bg-color2 {
+        background-color:  rgb(235, 240, 237);
+    }
+
+    .bg-color1 {
+        background-color: rgb(153, 191, 163);
+    }
+
+    #services > article > * {
+        height: 450px;
+    }
+
+    .margin-top {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .nav-item > a {
+        font-size: 20px !important;
+    }
+
+    #contact .w-75 {
+        width: 90% !important;
+    }
+
+    .card-body a {
+        padding: 10px;
+    }
+
+    .card-body h4 {
+        font-size: 21px;
+    }
+
+    .bottom-2 {
+        bottom: 10vh;
+    }
+
+    .right {
+        right: 5%;
+    }
+    
+    .left {
+        left: 3%;
+    }
+
+    .margin-left {
+        margin-left: 0;
+    }
+
+    .top-left {
+        width: 55% !important;
+        position: relative !important;
+        top: 0;
+        left: 0;
+    }
+
+    .top-left > h5 {
+        font-size: 50px;
+        line-height: 37px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #services > article > * {
+        height: 400px;
+    }
+
+    #services > article p.w-95 {
+        width: 100% !important;
+        font-size: 19px !important;
+    }
+
+    .rose-1 > p {
+        font-size: 25px !important;
+    }
+
+    form button {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    h1 {
+        font-size: 50px !important;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #services .btn-outline-light {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .d-none {
+        display: none !important;
+    }
+
+    main > section > header {
+        margin-bottom: 50px;
+    }
+
+    #services > article {
+        margin-bottom: 0;
+    }
+
+    #services > article > :nth-child(2), #services > article > :nth-child(3) {
+        height: 300px;
+    }
+
+    #services > article > :first-child, #services > article > :last-child {
+        height: auto;
+    }
+
+    .rose-2 {
+        top: 0;
+    }
+
+    figure.col-md-5 {
+        width: 80% !important;
+    }
+
+    figure.col-md-5 > .right {
+        right: 5% !important;
+    }
+
+    #services img {
+        width: 80%;
+        margin: 20px 0 !important;
+    }
+
+    .bottom-2 {
+        bottom: 18vh;
+    }
+
+    .right {
+        right: 30%;
+    }
+    
+    .left {
+        left: 25%;
+    }
+
+    label {
+        font-size: 17px;
+    }
+
+    .carousel .btn {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 695px) {
+    .carousel-item:nth-child(2) .carousel-caption, .carousel-item:last-child .carousel-caption  {
+        margin-bottom: 25vh;
+    }
+
+    .blockquote-2 {
+        line-height: 40px;
+        font-size: 43px !important;
+    }
+
+    .blockquote-footer2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .top-left {
+        width: 90% !important;
+    }
+
+    #about-us .row-12 {
+        width: 85% !important;
+    }
+
+    .carousel-item:last-child .carousel-caption h2 {
+        line-height: 50px;
+        font-size: 50px !important;
+    } 
+
+    .carousel p {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #contact h4 {
+        line-height: 40px;
+        font-size: 42px !important;
+    }
+
+    h1 {
+        font-size: 45px !important;
+        line-height: 40px;
+    }
+
+    .rose-1 > p {
+        font-size: 21px !important;
+    }
+
+    .carousel-item:nth-child(2) .carousel-caption {
+        margin-bottom: 30vh;
+    }
+
+    .carousel-item:nth-child(2) .carousel-caption h2 .blockquote {
+        font-size: 26px !important;
+    } 
+
+    .carousel-item:nth-child(2) .carousel-caption h2 .blockquote-footer {
+        font-size: 40px !important;
+    } 
+
+    .gallery-text {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .gallery-text > span {
+        font-size: 45px !important;
+    }
+
+    footer.footer1 a {
+        font-size: 19px !important;
+    }
+
+    #contact p.font-21 {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .modal-content {
+        width: 85vw !important;
+        margin: 0 auto;
+    }
+
+    footer p.font-21, footer.footer1 .font-21 {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 556px) {
+    .font-85 {
+        font-size: 70px !important;
+    }
+
+    h3.font-60 {
+        font-size: 45px !important;
+    }
+
+    header > h2 {
+        top: -50px;
+    }
+
+    .font-23 {
+        width: 100% !important;
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .logo-background {
+        height: 400px;
+        width: 100%;
+    }
+
+    #services {
+        width: 90% !important;
+    }
+
+    #services > article > :nth-child(2), #services > article > :nth-child(3) {
+        height: auto !important;
+        padding: 50px 10px;
+    }
+
+    #services img {
+        width: 100%;
+    }
+
+    footer .nav {
+        flex-direction: column !important;
+    }
+
+    footer .nav li {
+        margin: 0 !important;
+    }
+
+    footer.footer1 a, footer a {
+        font-size: 17px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-brand {
+        margin-left: 20px !important;
+    }
+
+    .carousel-item:last-child .carousel-caption {
+        margin-bottom: 20vh;
+    } 
+
+    .carousel-item:last-child .carousel-caption h2 {
+        font-size: 40px !important;
+        line-height: 37px;
+    } 
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 37px !important;
+        line-height: 30px;
+    }
+
+    .carousel p {
+        font-size: 17px !important;
+    }
+
+    figure.col-md-5 {
+        width: 90% !important;
+    }
+
+    figure.col-md-5 > .right {
+        right: 5% !important;
+        bottom: 3% !important;
+    }
+
+    .bottom-2 {
+        bottom: 10vh;
+    }
+
+    .gallery-text {
+        font-size: 18px ;
+        line-height: 23px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .logo {
+        width: 180px !important;
+    }
+
+    .carousel-item:nth-child(2) .carousel-caption {
+        margin-bottom: 25vh;
+    }  
+
+    .carousel-item:nth-child(2) .carousel-caption h2 .blockquote {
+        font-size: 24px !important;
+        line-height: 27px;
+    } 
+
+    .carousel-item:nth-child(2) .carousel-caption h2 .blockquote-footer {
+        font-size: 35px !important;
+    } 
+
+    .modal-body {
+        font-size: 17px;
+    }
+
+    #contact p.font-21, #contact p {
+        font-size: 18px !important;
+    }
+
+    .card-body article h4 {
+        font-size: 19px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #services h4 {
+        font-size: 45px !important;
+        line-height: 35px !important;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    footer p.font-21, footer.footer1 .font-21 {
+        font-size: 17px !important;
+    }
+
+    h1 {
+        font-size: 30px !important;
+        line-height: 22px;
+    }
+
+    .carousel p {
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    h1 {
+        font-size: 30px !important;
+        line-height: 24px;
+    }
+
+    .carousel p {
+        font-size: 15px !important;
+    }
+}
